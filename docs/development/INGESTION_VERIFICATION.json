@@ -1,0 +1,60 @@
+{
+  "plan": "03-01",
+  "started_at": "2026-10-13T22:58:07.092Z",
+  "mode": "full",
+  "checks": [
+    {
+      "label": "Python 3.14 interpreter",
+      "exit_code": 0,
+      "duration_ms": 83
+    },
+    {
+      "label": "TypeScript",
+      "exit_code": 0,
+      "duration_ms": 2713
+    },
+    {
+      "label": "ESLint",
+      "exit_code": 0,
+      "duration_ms": 4855
+    },
+    {
+      "label": "Next production build",
+      "exit_code": 0,
+      "duration_ms": 4177
+    },
+    {
+      "label": "Ruff",
+      "exit_code": 0,
+      "duration_ms": 132
+    },
+    {
+      "label": "OpenAPI and generated TypeScript drift",
+      "exit_code": 0,
+      "duration_ms": 1659
+    },
+    {
+      "label": "API tests",
+      "exit_code": 0,
+      "duration_ms": 13114
+    },
+    {
+      "label": "Python dependency consistency",
+      "exit_code": 0,
+      "duration_ms": 762
+    },
+    {
+      "label": "Agent Continuity tests",
+      "exit_code": 0,
+      "duration_ms": 11244
+    },
+    {
+      "label": "Web production smoke",
+      "exit_code": 0,
+      "duration_ms": 703
+    }
+  ],
+  "completed_at": "2026-10-13T22:58:46.537Z",
+  "passed": true,
+  "domain_openapi_drift": "mandatory; checks OpenAPI and TypeScript against current DTOs"
+}

@@ -1,0 +1,13 @@
+{
+  "mode": "interactive",
+  "granularity": "standard",
+  "response_language": "Spanish",
+  "resolve_model_ids": "omit",
+  "planning": { "commit_docs": false, "search_gitignored": false },
+  "git": { "branching_strategy": "none", "create_tag": false },
+  "workflow": { "research": false, "plan_check": true, "verifier": true, "nyquist_validation": true, "ai_integration_phase": false, "auto_advance": false, "cross_ai_execution": false, "security_enforcement": true },
+  "parallelization": { "enabled": false },
+  "gates": { "execute_next_plan": true, "confirm_transition": true, "confirm_milestone_scope": true },
+  "hooks": { "context_warnings": true, "context_warning_threshold": 25, "context_critical_threshold": 15, "session_state": false, "phase_boundary": false, "workflow_guard": false },
+  "graphify": { "auto_update": false }
+}

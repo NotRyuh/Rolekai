@@ -1,0 +1,19 @@
+docs:
+  - path: docs/product/PRD.md
+    type: PRD
+  - path: docs/product/JOB_HUNTER_SPEC.md
+    type: SPEC
+  - path: docs/product/MVP_BACKLOG.md
+    type: SPEC
+  - path: docs/product/DECISIONS.md
+    type: ADR
+  - path: docs/architecture/ARCHITECTURE.md
+    type: ADR
+  - path: docs/architecture/AGENT_DESIGN.md
+    type: SPEC
+  - path: docs/architecture/DATA_MODEL.md
+    type: SPEC
+  - path: docs/architecture/API_CONTRACTS.md
+    type: SPEC
+  - path: docs/architecture/TECH_DECISIONS.md
+    type: ADR

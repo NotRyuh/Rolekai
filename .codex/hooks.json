@@ -1,0 +1,76 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/scripts/agent-continuity.cjs\" hook --runtime codex",
+            "commandWindows": "powershell.exe -NoProfile -Command \"node ((git rev-parse --show-toplevel) + '/scripts/agent-continuity.cjs') hook --runtime codex\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/scripts/agent-continuity.cjs\" hook --runtime codex",
+            "commandWindows": "powershell.exe -NoProfile -Command \"node ((git rev-parse --show-toplevel) + '/scripts/agent-continuity.cjs') hook --runtime codex\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/scripts/agent-continuity.cjs\" hook --runtime codex",
+            "commandWindows": "powershell.exe -NoProfile -Command \"node ((git rev-parse --show-toplevel) + '/scripts/agent-continuity.cjs') hook --runtime codex\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/scripts/agent-continuity.cjs\" hook --runtime codex",
+            "commandWindows": "powershell.exe -NoProfile -Command \"node ((git rev-parse --show-toplevel) + '/scripts/agent-continuity.cjs') hook --runtime codex\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/scripts/agent-continuity.cjs\" hook --runtime codex",
+            "commandWindows": "powershell.exe -NoProfile -Command \"node ((git rev-parse --show-toplevel) + '/scripts/agent-continuity.cjs') hook --runtime codex\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/scripts/agent-continuity.cjs\" hook --runtime codex",
+            "commandWindows": "powershell.exe -NoProfile -Command \"node ((git rev-parse --show-toplevel) + '/scripts/agent-continuity.cjs') hook --runtime codex\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

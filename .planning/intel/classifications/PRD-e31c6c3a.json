@@ -1,0 +1,22 @@
+{
+  "source_path": "docs/product/PRD.md",
+  "type": "PRD",
+  "confidence": "high",
+  "manifest_override": true,
+  "title": "Rolekai — Product Requirements Document (PRD) v1.0",
+  "summary": "Authoritative approved product reference; see source and SYNTHESIS.md.",
+  "scope": [
+    "product"
+  ],
+  "cross_refs": [
+    "https://www.tealhq.com/tools/job-tracker",
+    "https://help.huntr.co/en/articles/9883324-job-tracker",
+    "https://help.simplify.jobs/help/collections/1126456-tracking-your-job-search",
+    "https://github.com/maerzhase/jobnest",
+    "https://github.com/rutuu/ApplyTrail"
+  ],
+  "locked": false,
+  "precedence": null,
+  "notes": "Explicit manifest; no source modifications.",
+  "source_sha256": "09e472f9cb3316ac72bd6c58462c633cbcf098fc42a465cb2a3de38cb68c4e7a"
+}

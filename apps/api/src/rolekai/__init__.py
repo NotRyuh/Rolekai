@@ -1,0 +1,1 @@
+"""Rolekai modular monolith foundation."""

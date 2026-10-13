@@ -1,0 +1,16 @@
+{
+  "source_path": "docs/architecture/DATA_MODEL.md",
+  "type": "SPEC",
+  "confidence": "high",
+  "manifest_override": true,
+  "title": "Rolekai — Data Model v1.0",
+  "summary": "Authoritative approved architecture reference; see source and SYNTHESIS.md.",
+  "scope": [
+    "architecture"
+  ],
+  "cross_refs": [],
+  "locked": false,
+  "precedence": null,
+  "notes": "Explicit manifest; no source modifications.",
+  "source_sha256": "13cec64c6c982d23f67d4c42500a6770d22d88d59295c1bd881ea1857d5376a0"
+}

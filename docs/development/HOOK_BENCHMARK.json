@@ -1,0 +1,48 @@
+{
+  "observed_at": "2026-10-13T17:03:03.273Z",
+  "node": "v24.18.0",
+  "platform": "win32",
+  "note": "15 sequential process launches after one warmup; local dirty Git tree; includes process startup, no LLM. No universal performance claim.",
+  "baseline_node": {
+    "samples": 15,
+    "median_ms": 67.26,
+    "p95_ms": 87.98,
+    "min_ms": 61.8
+  },
+  "checkpoint_repeated": {
+    "samples": 15,
+    "median_ms": 335.34,
+    "p95_ms": 857.82,
+    "min_ms": 291.89
+  },
+  "session_start": {
+    "samples": 15,
+    "median_ms": 569.23,
+    "p95_ms": 648.73,
+    "min_ms": 522.85
+  },
+  "native_claude_monitor_no_metric": {
+    "samples": 15,
+    "median_ms": 71.81,
+    "p95_ms": 81.22,
+    "min_ms": 68.22
+  },
+  "claude_adapter_no_metric": {
+    "samples": 15,
+    "median_ms": 176.66,
+    "p95_ms": 236.84,
+    "min_ms": 160.83
+  },
+  "baseline_powershell": {
+    "samples": 15,
+    "median_ms": 229.91,
+    "p95_ms": 245.53,
+    "min_ms": 216.89
+  },
+  "codex_windows_stop": {
+    "samples": 15,
+    "median_ms": 836.6,
+    "p95_ms": 885.06,
+    "min_ms": 788.71
+  }
+}

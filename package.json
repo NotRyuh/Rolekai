@@ -1,0 +1,17 @@
+{
+  "name": "rolekai",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/web"],
+  "engines": { "node": ">=24.0.0", "npm": ">=10.0.0" },
+  "scripts": {
+    "dev:web": "npm run dev --workspace @rolekai/web",
+    "build": "npm run build --workspace @rolekai/web",
+    "typecheck": "npm run typecheck --workspace @rolekai/web",
+    "lint": "npm run lint --workspace @rolekai/web",
+    "test": "node --test tests/development/continuity.test.cjs tests/development/hooks.test.cjs",
+    "quality": "node scripts/quality.cjs",
+    "contracts:check": "node scripts/contracts.cjs",
+    "contracts:export": "node scripts/contracts.cjs --export"
+  }
+}

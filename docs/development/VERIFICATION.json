@@ -1,0 +1,1572 @@
+{
+  "observed_at": "2026-10-13T17:05:09.325Z",
+  "checks": [
+    {
+      "name": "development suite",
+      "ok": true,
+      "exit_code": 0,
+      "test_count": 13,
+      "passed": 13,
+      "failed": 0
+    },
+    {
+      "name": "structure 01-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_count": 3,
+        "tasks": [
+          {
+            "name": "Task 1: Scaffold npm workspaces and the FastAPI package with documented Windows setup",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 2: Add PostgreSQL migration scaffolding, health checks and OTel",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 3: Wire local and CI quality gates with setup smoke checks",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          }
+        ],
+        "frontmatter_fields": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "requirements",
+          "must_haves"
+        ]
+      }
+    },
+    {
+      "name": "frontmatter 01-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "missing": [],
+        "present": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "must_haves"
+        ],
+        "invalidValue": [],
+        "schema": "plan"
+      }
+    },
+    {
+      "name": "structure 02-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_count": 3,
+        "tasks": [
+          {
+            "name": "Task 1: Define typed domains, enums and owner-scoped persistence",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 2: Implement profile, job decisions and explicitly authorized Application services",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 3: Publish and test the OpenAPI/internal connector contracts",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          }
+        ],
+        "frontmatter_fields": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "requirements",
+          "must_haves"
+        ]
+      }
+    },
+    {
+      "name": "frontmatter 02-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "missing": [],
+        "present": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "must_haves"
+        ],
+        "invalidValue": [],
+        "schema": "plan"
+      }
+    },
+    {
+      "name": "structure 03-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_count": 3,
+        "tasks": [
+          {
+            "name": "Task 1: Build three deterministic adapters and versioned fixtures",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 2: Normalize, exact-dedupe and persist observations/provenance",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 3: Wire asynchronous imports and the PostgreSQL worker",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          }
+        ],
+        "frontmatter_fields": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "requirements",
+          "must_haves"
+        ]
+      }
+    },
+    {
+      "name": "frontmatter 03-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "missing": [],
+        "present": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "must_haves"
+        ],
+        "invalidValue": [],
+        "schema": "plan"
+      }
+    },
+    {
+      "name": "structure 04-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_count": 3,
+        "tasks": [
+          {
+            "name": "Task 1: Implement deterministic Mexico/remote eligibility and reasons",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 2: Implement bounded LangGraph extraction/comparison with evidence validation",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 3: Persist immutable evaluations and expose safe asynchronous results",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          }
+        ],
+        "frontmatter_fields": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "requirements",
+          "must_haves"
+        ]
+      }
+    },
+    {
+      "name": "frontmatter 04-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "missing": [],
+        "present": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "must_haves"
+        ],
+        "invalidValue": [],
+        "schema": "plan"
+      }
+    },
+    {
+      "name": "structure 05-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_count": 3,
+        "tasks": [
+          {
+            "name": "Task 1: Build typed Discover, job detail and Saved views",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 2: Add explicit manual Application registration and separate board",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 3: Add minimum Activity and editable profile/evidence Settings",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          }
+        ],
+        "frontmatter_fields": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "requirements",
+          "must_haves"
+        ]
+      }
+    },
+    {
+      "name": "frontmatter 05-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "missing": [],
+        "present": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "must_haves"
+        ],
+        "invalidValue": [],
+        "schema": "plan"
+      }
+    },
+    {
+      "name": "structure 06-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "task_count": 3,
+        "tasks": [
+          {
+            "name": "Task 1: Prove fixture-based full-stack acceptance and resilience",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 2: Validate authorized real source samples and labeled evaluator dataset",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          },
+          {
+            "name": "Task 3: Document use, limitations, recovery and final P0 review",
+            "type": "auto",
+            "hasFiles": true,
+            "hasAction": true,
+            "hasVerify": true,
+            "hasDone": true
+          }
+        ],
+        "frontmatter_fields": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "requirements",
+          "must_haves"
+        ]
+      }
+    },
+    {
+      "name": "frontmatter 06-01-PLAN.md",
+      "ok": true,
+      "result": {
+        "valid": true,
+        "missing": [],
+        "present": [
+          "phase",
+          "plan",
+          "type",
+          "wave",
+          "depends_on",
+          "files_modified",
+          "autonomous",
+          "must_haves"
+        ],
+        "invalidValue": [],
+        "schema": "plan"
+      }
+    },
+    {
+      "name": "roadmap phase IDs",
+      "ok": true,
+      "result": {
+        "warnings": []
+      }
+    },
+    {
+      "name": "planning consistency",
+      "ok": true,
+      "result": {
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "warning_count": 0
+      }
+    },
+    {
+      "name": "native snapshot",
+      "ok": true,
+      "result": {
+        "schema_version": 1,
+        "generated_from": {
+          "cwd": "C:/Users/Uriel Garcia/Documents/Personal/Rolekai",
+          "planning_root": "C:/Users/Uriel Garcia/Documents/Personal/Rolekai/.planning"
+        },
+        "milestone": {
+          "version": null,
+          "name": null,
+          "scope": "unscoped"
+        },
+        "active": {
+          "phase": {
+            "value": "1",
+            "scope": "complete"
+          },
+          "plan": {
+            "value": "1 of 1 in current phase",
+            "scope": "complete"
+          },
+          "status": {
+            "value": "planning",
+            "scope": "complete"
+          }
+        },
+        "phases": [
+          {
+            "dir": "01-foundation",
+            "phase_id": "01",
+            "complete": false,
+            "goal": {
+              "value": null,
+              "scope": "complete"
+            },
+            "dependencies": {
+              "value": [],
+              "scope": "complete"
+            },
+            "verification": {
+              "status": "missing",
+              "next_action": "No verification report found — the verify step never completed. Running execute-phase is safe here: it resumes at the verification gates and does not re-run plans that already have a SUMMARY.md (see #2868).",
+              "route": "execute-phase"
+            },
+            "roadmap_acceptance": {
+              "checkbox": false,
+              "authoritative": false
+            },
+            "uat": {
+              "unresolved": [],
+              "scope": "complete"
+            },
+            "plan_count": 1,
+            "summary_count": 0,
+            "plans": [
+              {
+                "id": "01-01",
+                "file": "01-01-PLAN.md",
+                "superseded": false,
+                "objective": "P0.1 Foundation. Prepare the approved monorepo/environment, PostgreSQL migration base, observable health and quality gates. No domain behavior in this phase.",
+                "wave": 1,
+                "dependsOn": [],
+                "autonomous": false,
+                "agentHint": null,
+                "plannedFiles": [
+                  "package.json",
+                  "package-lock.json",
+                  "apps/web/package.json",
+                  "apps/web/tsconfig.json",
+                  "apps/api/pyproject.toml",
+                  "apps/api/src/rolekai/main.py",
+                  "apps/api/alembic.ini",
+                  "apps/api/migrations/env.py",
+                  "apps/api/src/rolekai/health.py",
+                  "apps/api/src/rolekai/telemetry.py",
+                  "apps/api/tests/test_health.py",
+                  "compose.yaml",
+                  ".env.example",
+                  ".github/workflows/quality.yml",
+                  "docs/development/SETUP.md"
+                ],
+                "changedFiles": null,
+                "hasSummary": false,
+                "tasks": [
+                  {
+                    "index": 1,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 1: Scaffold npm workspaces and the FastAPI package with documented Windows setup",
+                    "plannedFiles": [
+                      "package.json",
+                      "package-lock.json",
+                      "apps/web/package.json",
+                      "apps/web/tsconfig.json",
+                      "apps/api/pyproject.toml",
+                      "apps/api/src/rolekai/main.py",
+                      ".env.example",
+                      "docs/development/SETUP.md"
+                    ],
+                    "acceptanceCriteria": [
+                      "Workspace apps/web and importable rolekai API exist; documented commands work in a clean environment.",
+                      ".env.example contains placeholders only; no keys, credentials or product functionality are introduced."
+                    ],
+                    "done": "Reproducible shell packages and verified Windows run instructions; package versions and interpreter decision recorded.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 2,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 2: Add PostgreSQL migration scaffolding, health checks and OTel",
+                    "plannedFiles": [
+                      "compose.yaml",
+                      "apps/api/alembic.ini",
+                      "apps/api/migrations/env.py",
+                      "apps/api/src/rolekai/health.py",
+                      "apps/api/src/rolekai/telemetry.py",
+                      "apps/api/tests/test_health.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "Liveness/readiness semantics pass both dependency states.",
+                      "Migration roundtrip is clean on disposable Postgres; OTel tests find no secret/body values."
+                    ],
+                    "done": "Health, migration and telemetry foundations pass against the disposable environment.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 3,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 3: Wire local and CI quality gates with setup smoke checks",
+                    "plannedFiles": [
+                      ".github/workflows/quality.yml",
+                      "docs/development/SETUP.md",
+                      "apps/web/package.json",
+                      "apps/api/pyproject.toml"
+                    ],
+                    "acceptanceCriteria": [
+                      "Every documented local gate has the same CI counterpart.",
+                      "A deliberately broken type/test is rejected before restoring it; no deployment/automatic Git action exists."
+                    ],
+                    "done": "All foundation gates green, Windows smoke check recorded, required setup documented.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  }
+                ],
+                "scope": "complete"
+              }
+            ],
+            "scope": "complete"
+          },
+          {
+            "dir": "02-core-domain",
+            "phase_id": "02",
+            "complete": false,
+            "goal": {
+              "value": null,
+              "scope": "complete"
+            },
+            "dependencies": {
+              "value": [
+                "1"
+              ],
+              "scope": "complete"
+            },
+            "verification": {
+              "status": "missing",
+              "next_action": "No verification report found — the verify step never completed. Running execute-phase is safe here: it resumes at the verification gates and does not re-run plans that already have a SUMMARY.md (see #2868).",
+              "route": "execute-phase"
+            },
+            "roadmap_acceptance": {
+              "checkbox": false,
+              "authoritative": false
+            },
+            "uat": {
+              "unresolved": [],
+              "scope": "complete"
+            },
+            "plan_count": 1,
+            "summary_count": 0,
+            "plans": [
+              {
+                "id": "02-01",
+                "file": "02-01-PLAN.md",
+                "superseded": false,
+                "objective": "P0.2 Core Domain. Persist Candidate/Search Profile evidence, Job/SourceObservation/provenance, Evaluation, Application and Activity with independent contracts. Depends on foundation and disposable PostgreSQL.</objective>",
+                "wave": 2,
+                "dependsOn": [
+                  "01-01"
+                ],
+                "autonomous": false,
+                "agentHint": null,
+                "plannedFiles": [
+                  "apps/api/src/rolekai/profile/models.py",
+                  "apps/api/src/rolekai/jobs/models.py",
+                  "apps/api/src/rolekai/evaluation/models.py",
+                  "apps/api/src/rolekai/applications/models.py",
+                  "apps/api/src/rolekai/activity/models.py",
+                  "apps/api/src/rolekai/api/contracts.py",
+                  "apps/api/src/rolekai/applications/service.py",
+                  "apps/api/migrations/versions/0002_domains.py",
+                  "apps/api/tests/test_domain.py",
+                  "apps/api/tests/integration/test_domain_transactions.py",
+                  "packages/contracts/openapi.json",
+                  "package.json",
+                  "scripts/export-openapi.py",
+                  "scripts/check-openapi.py"
+                ],
+                "changedFiles": null,
+                "hasSummary": false,
+                "tasks": [
+                  {
+                    "index": 1,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 1: Define typed domains, enums and owner-scoped persistence",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/profile/models.py",
+                      "apps/api/src/rolekai/jobs/models.py",
+                      "apps/api/src/rolekai/evaluation/models.py",
+                      "apps/api/src/rolekai/applications/models.py",
+                      "apps/api/src/rolekai/activity/models.py",
+                      "apps/api/migrations/versions/0002_domains.py",
+                      "apps/api/tests/test_domain.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "Tests cover every independent domain and unknown field behavior.",
+                      "Profile/evidence is user-written; no scoring/LLM/connector side effects enter model constructors."
+                    ],
+                    "done": "Domain types and migration match approved model; ownership and immutability constraints proven.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 2,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 2: Implement profile, job decisions and explicitly authorized Application services",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/applications/service.py",
+                      "apps/api/tests/integration/test_domain_transactions.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "All protected requests and rollback/idempotence fixtures pass against PostgreSQL.",
+                      "No service imports an application submission client."
+                    ],
+                    "done": "Safe profile/decision/manual-tracking services and auditable transaction invariants.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 3,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 3: Publish and test the OpenAPI/internal connector contracts",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/api/contracts.py",
+                      "packages/contracts/openapi.json",
+                      "apps/api/tests/test_domain.py",
+                      "package.json",
+                      "scripts/export-openapi.py",
+                      "scripts/check-openapi.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "Contract snapshot and generated types agree; changing a DTO breaks the drift check.",
+                      "Async accepted responses do not claim completed imports/evaluations."
+                    ],
+                    "done": "All phase requirements map to tested schema/service behavior; the frontend can consume a stable contract.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  }
+                ],
+                "scope": "complete"
+              }
+            ],
+            "scope": "complete"
+          },
+          {
+            "dir": "03-job-ingestion",
+            "phase_id": "03",
+            "complete": false,
+            "goal": {
+              "value": null,
+              "scope": "complete"
+            },
+            "dependencies": {
+              "value": [
+                "2"
+              ],
+              "scope": "complete"
+            },
+            "verification": {
+              "status": "missing",
+              "next_action": "No verification report found — the verify step never completed. Running execute-phase is safe here: it resumes at the verification gates and does not re-run plans that already have a SUMMARY.md (see #2868).",
+              "route": "execute-phase"
+            },
+            "roadmap_acceptance": {
+              "checkbox": false,
+              "authoritative": false
+            },
+            "uat": {
+              "unresolved": [],
+              "scope": "complete"
+            },
+            "plan_count": 1,
+            "summary_count": 0,
+            "plans": [
+              {
+                "id": "03-01",
+                "file": "03-01-PLAN.md",
+                "superseded": false,
+                "objective": "P0.3 Job Ingestion. Manual URL, Remotive and known Greenhouse boards produce normalized, deduplicated, traceable jobs. Consume phase 2 contracts; never introduce Lever/Ashby or automatic submission.</objective>",
+                "wave": 3,
+                "dependsOn": [
+                  "02-01"
+                ],
+                "autonomous": false,
+                "agentHint": null,
+                "plannedFiles": [
+                  "apps/api/src/rolekai/connectors/base.py",
+                  "apps/api/src/rolekai/connectors/manual_url.py",
+                  "apps/api/src/rolekai/connectors/remotive.py",
+                  "apps/api/src/rolekai/connectors/greenhouse.py",
+                  "apps/api/src/rolekai/jobs/normalizer.py",
+                  "apps/api/src/rolekai/jobs/dedupe.py",
+                  "apps/api/src/rolekai/workflows/imports.py",
+                  "apps/api/src/rolekai/workflows/worker.py",
+                  "apps/api/tests/test_connectors.py",
+                  "apps/api/tests/integration/test_imports.py",
+                  "apps/api/tests/fixtures/remotive.json",
+                  "apps/api/tests/fixtures/greenhouse.json"
+                ],
+                "changedFiles": null,
+                "hasSummary": false,
+                "tasks": [
+                  {
+                    "index": 1,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 1: Build three deterministic adapters and versioned fixtures",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/connectors/base.py",
+                      "apps/api/src/rolekai/connectors/manual_url.py",
+                      "apps/api/src/rolekai/connectors/remotive.py",
+                      "apps/api/src/rolekai/connectors/greenhouse.py",
+                      "apps/api/tests/test_connectors.py",
+                      "apps/api/tests/fixtures/remotive.json",
+                      "apps/api/tests/fixtures/greenhouse.json"
+                    ],
+                    "acceptanceCriteria": [
+                      "Three adapters satisfy the same Pydantic contracts and source fixtures.",
+                      "Unknowns remain null; unauthorized fetching is rejected before any network request."
+                    ],
+                    "done": "Safe deterministic connectors and reproducible fixtures with provenance metadata.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 2,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 2: Normalize, exact-dedupe and persist observations/provenance",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/jobs/normalizer.py",
+                      "apps/api/src/rolekai/jobs/dedupe.py",
+                      "apps/api/tests/integration/test_imports.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "Reimport keeps one Job, preserved observations and attributable normalized fields.",
+                      "Similar jobs and cross-owner imports never collapse incorrectly; transaction rollback leaks no success event."
+                    ],
+                    "done": "Deterministic normalization/dedupe persists evidence without false certainty or domain crossover.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 3,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 3: Wire asynchronous imports and the PostgreSQL worker",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/workflows/imports.py",
+                      "apps/api/src/rolekai/workflows/worker.py",
+                      "apps/api/tests/integration/test_imports.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "Idempotent API/worker recovery and source-isolation tests pass.",
+                      "Failed imports never falsely return completed evaluations/applications."
+                    ],
+                    "done": "End-to-end ingestion pipeline and safe operational status/retry paths.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  }
+                ],
+                "scope": "complete"
+              }
+            ],
+            "scope": "complete"
+          },
+          {
+            "dir": "04-job-intelligence",
+            "phase_id": "04",
+            "complete": false,
+            "goal": {
+              "value": null,
+              "scope": "complete"
+            },
+            "dependencies": {
+              "value": [
+                "3"
+              ],
+              "scope": "complete"
+            },
+            "verification": {
+              "status": "missing",
+              "next_action": "No verification report found — the verify step never completed. Running execute-phase is safe here: it resumes at the verification gates and does not re-run plans that already have a SUMMARY.md (see #2868).",
+              "route": "execute-phase"
+            },
+            "roadmap_acceptance": {
+              "checkbox": false,
+              "authoritative": false
+            },
+            "uat": {
+              "unresolved": [],
+              "scope": "complete"
+            },
+            "plan_count": 1,
+            "summary_count": 0,
+            "plans": [
+              {
+                "id": "04-01",
+                "file": "04-01-PLAN.md",
+                "superseded": false,
+                "objective": "P0.4 Job Intelligence. Deterministic Mexico/remote eligibility and versioned requirement evaluation with explicit uncertainty. Depends on profiles/snapshots/ingestion, not on tailoring or Gmail.</objective>",
+                "wave": 4,
+                "dependsOn": [
+                  "03-01"
+                ],
+                "autonomous": false,
+                "agentHint": null,
+                "plannedFiles": [
+                  "apps/api/src/rolekai/jobs/eligibility.py",
+                  "apps/api/src/rolekai/evaluation/snapshots.py",
+                  "apps/api/src/rolekai/evaluation/graph.py",
+                  "apps/api/src/rolekai/evaluation/validation.py",
+                  "apps/api/src/rolekai/evaluation/service.py",
+                  "apps/api/tests/test_eligibility.py",
+                  "apps/api/tests/test_evaluation.py",
+                  "apps/api/tests/integration/test_evaluation.py",
+                  "evals/p0/dataset.json",
+                  "evals/p0/README.md"
+                ],
+                "changedFiles": null,
+                "hasSummary": false,
+                "tasks": [
+                  {
+                    "index": 1,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 1: Implement deterministic Mexico/remote eligibility and reasons",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/jobs/eligibility.py",
+                      "apps/api/tests/test_eligibility.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "All specified geographical cases return distinct evidenced outcomes.",
+                      "Unknown and contradiction handling is stable across reimport."
+                    ],
+                    "done": "Deterministic policy meets E4-02 without LLM guesses.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 2,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 2: Implement bounded LangGraph extraction/comparison with evidence validation",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/evaluation/snapshots.py",
+                      "apps/api/src/rolekai/evaluation/graph.py",
+                      "apps/api/src/rolekai/evaluation/validation.py",
+                      "apps/api/tests/test_evaluation.py",
+                      "evals/p0/dataset.json",
+                      "evals/p0/README.md"
+                    ],
+                    "acceptanceCriteria": [
+                      "Invalid evidence is rejected/abstained; expected grounded results pass labeled fixtures.",
+                      "No domain-writing or submission capability is available inside provider tools."
+                    ],
+                    "done": "Validated bounded graph, provider seam, dataset labels and privacy policy documented.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 3,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 3: Persist immutable evaluations and expose safe asynchronous results",
+                    "plannedFiles": [
+                      "apps/api/src/rolekai/evaluation/service.py",
+                      "apps/api/tests/integration/test_evaluation.py"
+                    ],
+                    "acceptanceCriteria": [
+                      "Versioning/retry/ownership/failure isolation integration tests pass.",
+                      "Previous Evaluation and Job/Applications remain unchanged by new evaluator execution."
+                    ],
+                    "done": "Safe asynchronous, inspectable evaluation results and reproducible versions.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  }
+                ],
+                "scope": "complete"
+              }
+            ],
+            "scope": "complete"
+          },
+          {
+            "dir": "05-dashboard",
+            "phase_id": "05",
+            "complete": false,
+            "goal": {
+              "value": null,
+              "scope": "complete"
+            },
+            "dependencies": {
+              "value": [
+                "4"
+              ],
+              "scope": "complete"
+            },
+            "verification": {
+              "status": "missing",
+              "next_action": "No verification report found — the verify step never completed. Running execute-phase is safe here: it resumes at the verification gates and does not re-run plans that already have a SUMMARY.md (see #2868).",
+              "route": "execute-phase"
+            },
+            "roadmap_acceptance": {
+              "checkbox": false,
+              "authoritative": false
+            },
+            "uat": {
+              "unresolved": [],
+              "scope": "complete"
+            },
+            "plan_count": 1,
+            "summary_count": 0,
+            "plans": [
+              {
+                "id": "05-01",
+                "file": "05-01-PLAN.md",
+                "superseded": false,
+                "objective": "P0.5 Dashboard. Review sources/evaluation, save/dismiss, confirm manual Application, inspect minimum Activity and edit minimal profile. Consume typed API; expanded Overview/history/CV Studio stay P1.</objective>",
+                "wave": 5,
+                "dependsOn": [
+                  "04-01"
+                ],
+                "autonomous": false,
+                "agentHint": null,
+                "plannedFiles": [
+                  "apps/web/package.json",
+                  "apps/web/src/lib/api.ts",
+                  "apps/web/src/app/discover/page.tsx",
+                  "apps/web/src/app/jobs/[id]/page.tsx",
+                  "apps/web/src/app/saved/page.tsx",
+                  "apps/web/src/app/applications/page.tsx",
+                  "apps/web/src/app/activity/page.tsx",
+                  "apps/web/src/app/settings/page.tsx",
+                  "apps/web/src/components/application-confirmation.tsx",
+                  "apps/web/tests/p0.spec.ts"
+                ],
+                "changedFiles": null,
+                "hasSummary": false,
+                "tasks": [
+                  {
+                    "index": 1,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 1: Build typed Discover, job detail and Saved views",
+                    "plannedFiles": [
+                      "apps/web/package.json",
+                      "apps/web/src/lib/api.ts",
+                      "apps/web/src/app/discover/page.tsx",
+                      "apps/web/src/app/jobs/[id]/page.tsx",
+                      "apps/web/src/app/saved/page.tsx",
+                      "apps/web/tests/p0.spec.ts"
+                    ],
+                    "acceptanceCriteria": [
+                      "Filters/detail/decisions pass browser tests including malicious HTML and unknown fields.",
+                      "State dimensions and source evidence are visible without conflating saved with applied."
+                    ],
+                    "done": "Accessible typed review/save flow with no hidden application side effects.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 2,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 2: Add explicit manual Application registration and separate board",
+                    "plannedFiles": [
+                      "apps/web/src/app/applications/page.tsx",
+                      "apps/web/src/components/application-confirmation.tsx",
+                      "apps/web/tests/p0.spec.ts"
+                    ],
+                    "acceptanceCriteria": [
+                      "Explicit confirmation and independent Application board tests pass.",
+                      "No third-party submission request/tool is present or invoked."
+                    ],
+                    "done": "Human-controlled manual tracking visibly distinct from saved jobs.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 3,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 3: Add minimum Activity and editable profile/evidence Settings",
+                    "plannedFiles": [
+                      "apps/web/src/app/activity/page.tsx",
+                      "apps/web/src/app/settings/page.tsx",
+                      "apps/web/tests/p0.spec.ts"
+                    ],
+                    "acceptanceCriteria": [
+                      "Profile persistence, evidence and minimum audit view work with keyboard-only navigation.",
+                      "Deferred capabilities remain absent and are described accurately in user documentation."
+                    ],
+                    "done": "Required minimal dashboard views and evidence profile complete without P1/P2 expansion.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  }
+                ],
+                "scope": "complete"
+              }
+            ],
+            "scope": "complete"
+          },
+          {
+            "dir": "06-end-to-end-validation",
+            "phase_id": "06",
+            "complete": false,
+            "goal": {
+              "value": null,
+              "scope": "complete"
+            },
+            "dependencies": {
+              "value": [
+                "5"
+              ],
+              "scope": "complete"
+            },
+            "verification": {
+              "status": "missing",
+              "next_action": "No verification report found — the verify step never completed. Running execute-phase is safe here: it resumes at the verification gates and does not re-run plans that already have a SUMMARY.md (see #2868).",
+              "route": "execute-phase"
+            },
+            "roadmap_acceptance": {
+              "checkbox": false,
+              "authoritative": false
+            },
+            "uat": {
+              "unresolved": [],
+              "scope": "complete"
+            },
+            "plan_count": 1,
+            "summary_count": 0,
+            "plans": [
+              {
+                "id": "06-01",
+                "file": "06-01-PLAN.md",
+                "superseded": false,
+                "objective": "P0.6 End-to-End Validation. Prove the first auditable vertical slice, quantify source/evaluator behavior and document recovery/limits. Depends on all prior phases; live checks require authorized source access and approved profile/model configuration.</objective>",
+                "wave": 6,
+                "dependsOn": [
+                  "05-01"
+                ],
+                "autonomous": false,
+                "agentHint": null,
+                "plannedFiles": [
+                  "apps/api/tests/integration/test_p0_vertical_slice.py",
+                  "apps/api/tests/test_security.py",
+                  "apps/web/tests/p0-live.spec.ts",
+                  "evals/p0/dataset.json",
+                  "evals/p0/results.json",
+                  "docs/development/P0_VALIDATION.md",
+                  "docs/user/P0_GUIDE.md",
+                  "docs/development/SOURCE_POLICIES.md"
+                ],
+                "changedFiles": null,
+                "hasSummary": false,
+                "tasks": [
+                  {
+                    "index": 1,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 1: Prove fixture-based full-stack acceptance and resilience",
+                    "plannedFiles": [
+                      "apps/api/tests/integration/test_p0_vertical_slice.py",
+                      "apps/api/tests/test_security.py",
+                      "apps/web/tests/p0-live.spec.ts"
+                    ],
+                    "acceptanceCriteria": [
+                      "Full test suite/gates pass with each failure-class behavior observable.",
+                      "Idempotence/ownership/SSRF/HTML/redaction and saved-Job authorization have explicit assertions."
+                    ],
+                    "done": "Repeatable complete P0 fixture evidence, no unverified success claims.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 2,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 2: Validate authorized real source samples and labeled evaluator dataset",
+                    "plannedFiles": [
+                      "evals/p0/dataset.json",
+                      "evals/p0/results.json",
+                      "docs/development/P0_VALIDATION.md",
+                      "docs/development/SOURCE_POLICIES.md"
+                    ],
+                    "acceptanceCriteria": [
+                      "All three sources have dated real examples and explicit eligible/ineligible/unknown cases.",
+                      "Live versus simulated results and measured sample sizes are clearly separated; no invented metrics."
+                    ],
+                    "done": "Evidence-backed live acceptance/evaluation report or explicit unresolved gate, never a fabricated pass.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  },
+                  {
+                    "index": 3,
+                    "kind": "auto",
+                    "type": "auto",
+                    "name": "Task 3: Document use, limitations, recovery and final P0 review",
+                    "plannedFiles": [
+                      "docs/user/P0_GUIDE.md",
+                      "docs/development/P0_VALIDATION.md",
+                      "docs/development/SOURCE_POLICIES.md"
+                    ],
+                    "acceptanceCriteria": [
+                      "Every approved acceptance item links measured evidence or an explicit open issue.",
+                      "Setup/use/limits/recovery instructions match actual behavior and require no security bypass."
+                    ],
+                    "done": "P0 review package ready for human acceptance, no hidden product/deployment automation.",
+                    "changedFiles": null,
+                    "provenance": "absent",
+                    "agreement": "unknown",
+                    "status": "pending"
+                  }
+                ],
+                "scope": "complete"
+              }
+            ],
+            "scope": "complete"
+          }
+        ],
+        "orphan_phase_dirs": [],
+        "requirements": [
+          {
+            "id": "FND-01",
+            "text": "Monorepo, documented Windows setup, reproducible Node/Python dependencies and environment variables.",
+            "complete": false,
+            "mappedPhases": [
+              "1"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "FND-02",
+            "text": "PostgreSQL, migration upgrade/downgrade smoke checks, liveness/readiness and OTel without sensitive payloads.",
+            "complete": false,
+            "mappedPhases": [
+              "1"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "FND-03",
+            "text": "CI/local quality gates for TypeScript, Python, tests and generated API contracts.",
+            "complete": false,
+            "mappedPhases": [
+              "1"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E1-01",
+            "text": "Configure roles, Mexico residence and modality with mandatory/preferred rules.",
+            "complete": false,
+            "mappedPhases": [
+              "2"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E1-02",
+            "text": "Record dated professional evidence with source, separating fact from inference.",
+            "complete": false,
+            "mappedPhases": [
+              "2"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E1-03",
+            "text": "Persist technology preferences for transparent evaluation.",
+            "complete": false,
+            "mappedPhases": [
+              "2"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E2-01",
+            "text": "Job/detail retains original description, normalized fields, dates and explicit unknowns.",
+            "complete": false,
+            "mappedPhases": [
+              "2"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E2-02",
+            "text": "Immutable observations and field provenance distinguish human corrections.",
+            "complete": false,
+            "mappedPhases": [
+              "2"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "DOM-01",
+            "text": "Separate Job/Evaluation/Application/Activity contracts; owner isolation; saved Job + explicit Application action; atomic append-only activity.",
+            "complete": false,
+            "mappedPhases": [
+              "2"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E3-01",
+            "text": "Remotive discovery with attribution/link, bounded frequency and classified errors.",
+            "complete": false,
+            "mappedPhases": [
+              "3"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E3-02",
+            "text": "Manual URL with recoverable content or pasted-text fallback; URL/date still saved on inaccessible pages.",
+            "complete": false,
+            "mappedPhases": [
+              "3"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E3-03",
+            "text": "Known Greenhouse board/URL imports ID/title/location/URL/content without submission endpoints.",
+            "complete": false,
+            "mappedPhases": [
+              "3"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E4-01",
+            "text": "Source ID/URL exact dedupe; retry/reimport preserves observations and creates no duplicate job.",
+            "complete": false,
+            "mappedPhases": [
+              "3"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "ING-01",
+            "text": "PostgreSQL worker claims, idempotency, bounded retries and source isolation; SSRF/HTML defenses; aggregate ImportRun results.",
+            "complete": false,
+            "mappedPhases": [
+              "3"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E4-02",
+            "text": "Mexico/remote eligibility eligible/ineligible/unknown/needs_review with source evidence.",
+            "complete": false,
+            "mappedPhases": [
+              "4"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E4-03",
+            "text": "Versioned evaluation separates covered/missing/unknown, cites job/profile evidence, optional relative fit score, no hiring probability.",
+            "complete": false,
+            "mappedPhases": [
+              "4"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E5-01",
+            "text": "Discover filtered by source/title/date/modality/eligibility.",
+            "complete": false,
+            "mappedPhases": [
+              "5"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E5-02",
+            "text": "Save/dismiss records activity and never creates Application.",
+            "complete": false,
+            "mappedPhases": [
+              "5"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E5-03",
+            "text": "Confirmed manual Application from saved Job with separate status board.",
+            "complete": false,
+            "mappedPhases": [
+              "5"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "UI-01",
+            "text": "Saved Jobs, minimal Activity and Settings/profile views expose evidence and safe errors.",
+            "complete": false,
+            "mappedPhases": [
+              "5"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          },
+          {
+            "id": "E2E-01",
+            "text": "Unit/integration/OpenAPI/evaluation/security fixtures pass; live authorized source examples satisfy the PRD §11 and MVP DoD, including exact duplicates and eligibility variants; documentation records source limitations.",
+            "complete": false,
+            "mappedPhases": [
+              "6"
+            ],
+            "diagnostics": [],
+            "scope": "complete"
+          }
+        ],
+        "progress": {
+          "accepted_phases": {
+            "completed": 0,
+            "total": 6,
+            "percent": 0,
+            "scope": "complete"
+          },
+          "completed_plans": {
+            "completed": 0,
+            "total": 6,
+            "percent": 0,
+            "scope": "complete"
+          }
+        },
+        "diagnostics": [
+          {
+            "code": "roadmap_unscoped",
+            "subject": "C:/Users/Uriel Garcia/Documents/Personal/Rolekai/.planning/ROADMAP.md",
+            "detail": "Milestone identity scope is \"unscoped\"; no version is invented to stand in for it."
+          },
+          {
+            "code": "uat_absent",
+            "subject": "01-foundation",
+            "detail": "No UAT document for this phase. This does not affect phase acceptance."
+          },
+          {
+            "code": "uat_absent",
+            "subject": "02-core-domain",
+            "detail": "No UAT document for this phase. This does not affect phase acceptance."
+          },
+          {
+            "code": "uat_absent",
+            "subject": "03-job-ingestion",
+            "detail": "No UAT document for this phase. This does not affect phase acceptance."
+          },
+          {
+            "code": "uat_absent",
+            "subject": "04-job-intelligence",
+            "detail": "No UAT document for this phase. This does not affect phase acceptance."
+          },
+          {
+            "code": "uat_absent",
+            "subject": "05-dashboard",
+            "detail": "No UAT document for this phase. This does not affect phase acceptance."
+          },
+          {
+            "code": "uat_absent",
+            "subject": "06-end-to-end-validation",
+            "detail": "No UAT document for this phase. This does not affect phase acceptance."
+          }
+        ]
+      }
+    },
+    {
+      "name": "health errors (known upstream advisories retained)",
+      "ok": true,
+      "result": {
+        "status": "degraded",
+        "errors": [],
+        "warnings": [
+          {
+            "code": "W010",
+            "message": "Missing 13 GSD agents: gsd-doc-writer, gsd-doc-verifier, gsd-dom-verifier, gsd-ai-researcher, gsd-debug-session-manager, gsd-domain-researcher, gsd-eval-auditor, gsd-eval-planner, gsd-framework-selector, gsd-intel-updater, gsd-mempalace-curator, gsd-security-auditor, gsd-user-profiler — affected workflows will fall back to general-purpose",
+            "fix": "Run the GSD installer: npx @opengsd/gsd-core@latest",
+            "repairable": false
+          },
+          {
+            "code": "W019",
+            "message": "Unrecognized .planning/ file: INGEST-CONFLICTS.md — not a canonical GSD artifact",
+            "fix": "Move to .planning/milestones/ archive subdir or delete if stale. See templates/README.md for the canonical artifact list.",
+            "repairable": false
+          }
+        ],
+        "info": [
+          {
+            "code": "I001",
+            "message": "Phase 01-foundation has 1 plan(s) without a matching summary",
+            "fix": "May be in progress",
+            "repairable": false
+          },
+          {
+            "code": "I001",
+            "message": "Phase 02-core-domain has 1 plan(s) without a matching summary",
+            "fix": "May be in progress",
+            "repairable": false
+          },
+          {
+            "code": "I001",
+            "message": "Phase 03-job-ingestion has 1 plan(s) without a matching summary",
+            "fix": "May be in progress",
+            "repairable": false
+          },
+          {
+            "code": "I001",
+            "message": "Phase 04-job-intelligence has 1 plan(s) without a matching summary",
+            "fix": "May be in progress",
+            "repairable": false
+          },
+          {
+            "code": "I001",
+            "message": "Phase 05-dashboard has 1 plan(s) without a matching summary",
+            "fix": "May be in progress",
+            "repairable": false
+          },
+          {
+            "code": "I001",
+            "message": "Phase 06-end-to-end-validation has 1 plan(s) without a matching summary",
+            "fix": "May be in progress",
+            "repairable": false
+          }
+        ],
+        "repairable_count": 0
+      }
+    },
+    {
+      "name": "nine authoritative source hashes preserved",
+      "ok": true
+    },
+    {
+      "name": "no product implementation",
+      "ok": true
+    },
+    {
+      "name": ".claude/settings.json hook idempotence",
+      "ok": true
+    },
+    {
+      "name": ".codex/hooks.json hook idempotence",
+      "ok": true
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "Native Codex project/hook trust review still required; no bypass.",
+    "Live compaction and LLM-assisted execution were not forced; lifecycle/threshold tests are simulations.",
+    "GSD standard profile triggers W010 for optional full-profile roles; official ingest report triggers upstream W019."
+  ]
+}

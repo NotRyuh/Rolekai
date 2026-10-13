@@ -1,0 +1,76 @@
+name: Rolekai quality
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14'
+      - name: Install web and local agent tools without npm lifecycle scripts
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm ci --prefix .tools --ignore-scripts --omit=optional --no-audit --no-fund
+          node scripts/install-gsd.cjs
+      - name: Install locked Python dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install setuptools==82.0.1
+          .venv/bin/python -m pip install --only-binary=:all: --require-hashes -r apps/api/requirements.lock
+          .venv/bin/python -m pip install --no-deps --no-build-isolation -e 'apps/api[test]'
+      - name: Start isolated PostgreSQL
+        run: |
+          node scripts/setup-local-env.cjs
+          docker compose up -d --wait postgres
+          docker compose exec -T postgres createdb -U rolekai rolekai_foundation_test
+          docker compose exec -T postgres createdb -U rolekai rolekai_domain_test
+          docker compose exec -T postgres createdb -U rolekai rolekai_ingestion_test
+      - name: Prove type and test gates reject invalid inputs
+        run: node scripts/test-quality-negative.cjs
+      - name: Same full quality command as local development
+        run: npm run quality
+      - name: Stop only this job's Compose services; preserve volumes
+        if: always()
+        run: docker compose stop postgres
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14'
+      - name: Install pinned dependencies
+        shell: pwsh
+        run: |
+          npm.cmd ci --ignore-scripts --no-audit --no-fund
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm.cmd ci --prefix .tools --ignore-scripts --omit=optional --no-audit --no-fund
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/install-gsd.cjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m venv .venv
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .venv/Scripts/python.exe -m pip install setuptools==82.0.1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .venv/Scripts/python.exe -m pip install --only-binary=:all: --require-hashes -r apps/api/requirements.lock
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .venv/Scripts/python.exe -m pip install --no-deps --no-build-isolation -e 'apps/api[test]'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Windows type/lint/build/unit/continuity/smoke gates
+        run: npm.cmd run quality -- --unit-only

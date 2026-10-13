@@ -1,0 +1,16 @@
+{
+  "source_path": "docs/product/MVP_BACKLOG.md",
+  "type": "SPEC",
+  "confidence": "high",
+  "manifest_override": true,
+  "title": "Rolekai — MVP Backlog v0.1",
+  "summary": "Authoritative approved product reference; see source and SYNTHESIS.md.",
+  "scope": [
+    "product"
+  ],
+  "cross_refs": [],
+  "locked": false,
+  "precedence": null,
+  "notes": "Explicit manifest; no source modifications.",
+  "source_sha256": "e9c94dc1f00ffd71454410587adf860490e258b4743918a7ecbf932c4653ede3"
+}

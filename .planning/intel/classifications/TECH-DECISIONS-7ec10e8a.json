@@ -1,0 +1,23 @@
+{
+  "source_path": "docs/architecture/TECH_DECISIONS.md",
+  "type": "ADR",
+  "confidence": "high",
+  "manifest_override": true,
+  "title": "Rolekai — Technology Decisions v1.0",
+  "summary": "Authoritative approved architecture reference; see source and SYNTHESIS.md.",
+  "scope": [
+    "architecture"
+  ],
+  "cross_refs": [
+    "https://nextjs.org/docs/app/api-reference/config/typescript",
+    "https://fastapi.tiangolo.com/reference/openapi/models/",
+    "https://langchain-ai.github.io/langgraph/concepts/durable_execution/",
+    "https://www.postgresql.org/docs/current/datatype-json.html",
+    "https://opentelemetry.io/docs/languages/python/",
+    "https://docs.langchain.com/langsmith/evaluation-types"
+  ],
+  "locked": true,
+  "precedence": null,
+  "notes": "Explicit manifest; no source modifications.",
+  "source_sha256": "c61509b4dea68b6e67d0c48fe0ca2f1286ab1433e69ed7aa1ca0bf734a6341cd"
+}

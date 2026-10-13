@@ -1,0 +1,11 @@
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const { spawnSync } = require('node:child_process');
+const root = path.resolve(__dirname, '..');
+const pkgRoot = path.join(root, '.tools/node_modules/@opengsd/gsd-core');
+const pkg = JSON.parse(fs.readFileSync(path.join(pkgRoot, 'package.json')));
+if (pkg.version !== '1.16.0' || pkg.repository.url !== 'git+https://github.com/open-gsd/gsd-core.git') throw new Error('Unreviewed installer: expected canonical GSD 1.16.0.');
+const result = spawnSync(process.execPath, ['--require', path.join(__dirname, 'gsd-local-home.cjs'), path.join(pkgRoot, 'bin/install.js'), '--claude', '--codex', '--local', '--profile=standard', '--relative-includes', '--no-legacy-cleanup'], { cwd: root, stdio: 'inherit', windowsHide: true, env: { ...process.env, GSD_HOME: path.join(root, '.tools/home') } });
+if (result.status !== 0) process.exit(result.status || 1);
+require('./configure-agents.cjs');

@@ -1,0 +1,16 @@
+{
+  "source_path": "docs/product/DECISIONS.md",
+  "type": "ADR",
+  "confidence": "high",
+  "manifest_override": true,
+  "title": "Rolekai — Product Decisions, Assumptions and Risks",
+  "summary": "Authoritative approved product reference; see source and SYNTHESIS.md.",
+  "scope": [
+    "product"
+  ],
+  "cross_refs": [],
+  "locked": true,
+  "precedence": null,
+  "notes": "Explicit manifest; no source modifications.",
+  "source_sha256": "627bb2c588cdff48ab757b3179bdc8bd192d18f7b76199913271d0176695eaec"
+}

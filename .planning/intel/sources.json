@@ -1,0 +1,50 @@
+{
+  "ingested_on": "2026-10-13",
+  "sources": [
+    {
+      "path": "docs/product/DECISIONS.md",
+      "sha256": "627bb2c588cdff48ab757b3179bdc8bd192d18f7b76199913271d0176695eaec",
+      "classification": ".planning/intel/classifications/DECISIONS-be7f7ba5.json"
+    },
+    {
+      "path": "docs/product/JOB_HUNTER_SPEC.md",
+      "sha256": "26efeec62cc7acd749e6f8aac3a332e61aa9480d6352e2dce55a0369ac91fd17",
+      "classification": ".planning/intel/classifications/JOB-HUNTER-SPEC-f0beb226.json"
+    },
+    {
+      "path": "docs/product/MVP_BACKLOG.md",
+      "sha256": "e9c94dc1f00ffd71454410587adf860490e258b4743918a7ecbf932c4653ede3",
+      "classification": ".planning/intel/classifications/MVP-BACKLOG-65351716.json"
+    },
+    {
+      "path": "docs/product/PRD.md",
+      "sha256": "09e472f9cb3316ac72bd6c58462c633cbcf098fc42a465cb2a3de38cb68c4e7a",
+      "classification": ".planning/intel/classifications/PRD-e31c6c3a.json"
+    },
+    {
+      "path": "docs/architecture/AGENT_DESIGN.md",
+      "sha256": "15a88367006a9ad838e4aa7b73d77033830b18a4c4a02b82a9d998a963148939",
+      "classification": ".planning/intel/classifications/AGENT-DESIGN-153547f7.json"
+    },
+    {
+      "path": "docs/architecture/API_CONTRACTS.md",
+      "sha256": "ccc9eeff236a8833519dbfac80982837bf9bc606b5aa180723342c7aac6a0a95",
+      "classification": ".planning/intel/classifications/API-CONTRACTS-cb35c65e.json"
+    },
+    {
+      "path": "docs/architecture/ARCHITECTURE.md",
+      "sha256": "f6ba365852cb245b1e2fb25b308dddaf93ebaf9f63da2454164eb85c7c278242",
+      "classification": ".planning/intel/classifications/ARCHITECTURE-35e17173.json"
+    },
+    {
+      "path": "docs/architecture/DATA_MODEL.md",
+      "sha256": "13cec64c6c982d23f67d4c42500a6770d22d88d59295c1bd881ea1857d5376a0",
+      "classification": ".planning/intel/classifications/DATA-MODEL-3143666e.json"
+    },
+    {
+      "path": "docs/architecture/TECH_DECISIONS.md",
+      "sha256": "c61509b4dea68b6e67d0c48fe0ca2f1286ab1433e69ed7aa1ca0bf734a6341cd",
+      "classification": ".planning/intel/classifications/TECH-DECISIONS-7ec10e8a.json"
+    }
+  ]
+}

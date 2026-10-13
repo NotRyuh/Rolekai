@@ -1,0 +1,16 @@
+{
+  "source_path": "docs/architecture/AGENT_DESIGN.md",
+  "type": "SPEC",
+  "confidence": "high",
+  "manifest_override": true,
+  "title": "Rolekai — Agent Design v1.0",
+  "summary": "Authoritative approved architecture reference; see source and SYNTHESIS.md.",
+  "scope": [
+    "architecture"
+  ],
+  "cross_refs": [],
+  "locked": false,
+  "precedence": null,
+  "notes": "Explicit manifest; no source modifications.",
+  "source_sha256": "15a88367006a9ad838e4aa7b73d77033830b18a4c4a02b82a9d998a963148939"
+}

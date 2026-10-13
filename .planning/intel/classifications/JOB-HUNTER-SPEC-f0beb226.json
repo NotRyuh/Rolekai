@@ -1,0 +1,21 @@
+{
+  "source_path": "docs/product/JOB_HUNTER_SPEC.md",
+  "type": "SPEC",
+  "confidence": "high",
+  "manifest_override": true,
+  "title": "Rolekai Hunter — Functional Specification v1.0",
+  "summary": "Authoritative approved product reference; see source and SYNTHESIS.md.",
+  "scope": [
+    "product"
+  ],
+  "cross_refs": [
+    "https://docs.greenhouse.io/job-board.html",
+    "https://github.com/lever/postings-api/blob/master/README.md",
+    "https://developers.ashbyhq.com/docs/public-job-posting-api",
+    "https://github.com/remotive-com/remote-jobs-api/blob/main/README.md"
+  ],
+  "locked": false,
+  "precedence": null,
+  "notes": "Explicit manifest; no source modifications.",
+  "source_sha256": "26efeec62cc7acd749e6f8aac3a332e61aa9480d6352e2dce55a0369ac91fd17"
+}
