@@ -23,6 +23,11 @@ def public_ip(value):
         address = address.ipv4_mapped
     if isinstance(address, ipaddress.IPv6Address) and (address.sixtofour or address.teredo):
         return False
+    # Do not route translated IPv4 addresses through an apparently public IPv6 literal.
+    if isinstance(address, ipaddress.IPv6Address) and address in ipaddress.ip_network(
+        "64:ff9b::/96"
+    ):
+        return False
     return address.is_global and not address.is_multicast and not address.is_unspecified
 
 
@@ -203,10 +208,12 @@ class SafeFetcher:
         allowed_hosts=(),
         max_bytes=262144,
         timeout=15,
+        allow_redirects=True,
     ):
         self.resolver, self.sender = resolver, sender
         self.allowed_hosts = set(allowed_hosts)
         self.max_bytes, self.timeout = max_bytes, timeout
+        self.allow_redirects = allow_redirects
 
     def fetch(self, url):
         deadline = time.monotonic() + self.timeout
@@ -228,6 +235,8 @@ class SafeFetcher:
             if len(response.body) > self.max_bytes:
                 raise ConnectorError("SOURCE_TOO_LARGE")
             if response.status in (301, 302, 303, 307, 308):
+                if not self.allow_redirects:
+                    raise ConnectorError("UNSAFE_REDIRECT")
                 destination = response.headers.get("location")
                 if not destination:
                     raise ConnectorError("UNSAFE_REDIRECT")
@@ -272,6 +281,7 @@ def fetch_json(url):
         allowed_hosts=["remotive.com", "boards-api.greenhouse.io"],
         max_bytes=8 * 1024 * 1024,
         timeout=30,
+        allow_redirects=False,
     ).fetch(url)
     try:
         result = json.loads(response.body)

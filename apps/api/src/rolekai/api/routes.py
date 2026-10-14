@@ -9,7 +9,7 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, Header, Query, Request, Security
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pydantic import AwareDatetime
-from sqlalchemy import select, tuple_
+from sqlalchemy import case, select, tuple_
 
 from rolekai.api.contracts import (
     ActivityPage,
@@ -54,7 +54,7 @@ from rolekai.persistence import (
     requirements,
 )
 from rolekai.profile.models import EvidenceCreate, ProfileEvidence, SearchProfile
-from rolekai.workflows.imports import accept_import, get_run
+from rolekai.workflows.imports import PRIORITY, accept_import, get_run
 
 bearer = HTTPBearer(auto_error=False)
 router = APIRouter(
@@ -198,7 +198,15 @@ def summary(connection, row):
     source = connection.execute(
         select(observations.c.source_type)
         .where(observations.c.owner_id == row["owner_id"], observations.c.job_id == row["id"])
-        .order_by(observations.c.retrieved_at.desc(), observations.c.id)
+        .order_by(
+            case(
+                PRIORITY,
+                value=observations.c.source_type,
+                else_=0,
+            ).desc(),
+            observations.c.retrieved_at.desc(),
+            observations.c.id,
+        )
         .limit(1)
     ).scalar()
     latest = (

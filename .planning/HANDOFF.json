@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "timestamp": "2026-10-13T23:04:12.571258+00:00",
+  "timestamp": "2026-10-14T16:41:19.928Z",
   "phase": "3",
   "phase_name": "Job Ingestion",
   "phase_dir": ".planning/phases/03-job-ingestion",
   "plan": 1,
   "task": 3,
   "total_tasks": 3,
-  "status": "paused",
+  "status": "in_progress",
   "completed_tasks": [
     {
       "id": 1,
@@ -23,30 +23,25 @@
       "id": 3,
       "name": "Async imports and PostgreSQL worker",
       "status": "in_progress",
-      "progress": "Implementation and 80 API/13 continuity/10 gates pass; independent review and native acceptance pending"
+      "progress": "Implementation, independent review corrections and full local gate pass: 86 API / 17 tooling / 10 checks; remote CI acceptance pending"
     }
   ],
   "remaining_tasks": [
     {
       "id": 3,
-      "name": "Independent review, necessary fixes and native 03-01 close-out",
+      "name": "Authorized publication, successful remote CI and native 03-01 close-out",
       "status": "in_progress"
     }
   ],
   "blockers": [
     {
-      "description": "Independent reviewer could not start due runtime usage limit; no approval received",
+      "description": "Remote CI 38594667672 is failed; successful new run on the authorized patch is required for acceptance.",
       "type": "external",
-      "workaround": "Resume review on home runtime with HANDOFF.md context"
+      "workaround": "Publish authorized patch and inspect both jobs before native close-out"
     }
   ],
   "async_jobs": [],
   "human_actions_pending": [
-    {
-      "action": "Clone private NotRyuh/Rolekai at home and rebuild only missing local dependencies",
-      "context": "HANDOFF.md gives exact commands; no environment/database/credentials transferred",
-      "blocking": false
-    },
     {
       "action": "Review/trust native local hooks through interactive UI",
       "context": "No security bypass; CLI trust inventory unverified",
@@ -63,71 +58,39 @@
       "decision": "03-01 remains incomplete until independent review and native close-out",
       "rationale": "Passing local tests is not review approval",
       "phase": "3"
+    },
+    {
+      "decision": "No commit/push/branch change without fresh authorization; no 04-01",
+      "rationale": "Current user request; CI evidence still required",
+      "phase": "3"
+    },
+    {
+      "decision": "User authorized one commit and push of this reviewed patch and handoff to master",
+      "rationale": "Explicit response to publication approval question on 2026-10-14",
+      "phase": "3"
     }
   ],
   "uncommitted_files": [
-    "A  .claude/settings.json",
-    "A  .codex/config.toml",
-    "A  .codex/hooks.json",
-    "AM .env.example",
-    "AM .github/workflows/quality.yml",
-    "A  .gitignore",
-    "A  .npmrc",
-    "A  .planning/HANDOFF.json",
-    "A  .planning/INGEST-CONFLICTS.md",
-    "A  .planning/PROJECT.md",
-    "A  .planning/REQUIREMENTS.md",
-    "A  .planning/ROADMAP.md",
-    "AM .planning/STATE.md",
-    "A  .planning/config.json",
-    "A  .planning/ingest-manifest.yaml",
-    "A  .planning/intel/SYNTHESIS.md",
-    "A  .planning/intel/classifications/AGENT-DESIGN-153547f7.json",
-    "A  .planning/intel/classifications/API-CONTRACTS-cb35c65e.json",
-    "A  .planning/intel/classifications/ARCHITECTURE-35e17173.json",
-    "A  .planning/intel/classifications/DATA-MODEL-3143666e.json",
-    "A  .planning/intel/classifications/DECISIONS-be7f7ba5.json",
-    "A  .planning/intel/classifications/JOB-HUNTER-SPEC-f0beb226.json",
-    "A  .planning/intel/classifications/MVP-BACKLOG-65351716.json",
-    "A  .planning/intel/classifications/PRD-e31c6c3a.json",
-    "A  .planning/intel/classifications/TECH-DECISIONS-7ec10e8a.json",
-    "A  .planning/intel/constraints.md",
-    "A  .planning/intel/context.md",
-    "A  .planning/intel/decisions.md",
-    "A  .planning/intel/requirements.md",
-    "A  .planning/intel/sources.json",
-    "A  .planning/phases/01-foundation/.continue-here.md",
-    "A  .planning/phases/01-foundation/01-01-EXECUTION.md",
-    "A  .planning/phases/01-foundation/01-01-PLAN.md",
-    "A  .planning/phases/01-foundation/01-01-SUMMARY.md",
-    "A  .planning/phases/01-foundation/01-VERIFICATION.md",
-    "A  .planning/phases/02-core-domain/.continue-here.md",
-    "A  .planning/phases/02-core-domain/02-01-EXECUTION.md",
-    "A  .planning/phases/02-core-domain/02-01-PLAN.md",
-    "A  .planning/phases/02-core-domain/02-01-SUMMARY.md",
-    "A  .planning/phases/02-core-domain/02-VERIFICATION.md",
-    "AM .planning/phases/03-job-ingestion/03-01-PLAN.md",
-    "A  .planning/phases/04-job-intelligence/04-01-PLAN.md",
-    "A  .planning/phases/05-dashboard/05-01-PLAN.md",
-    "A  .planning/phases/06-end-to-end-validation/06-01-PLAN.md",
-    "A  .tools/package-lock.json",
-    "A  .tools/package.json",
-    "AM AGENTS.md",
-    "A  CLAUDE.md",
-    "A  apps/api/alembic.ini",
-    "AM apps/api/migrations/env.py",
-    "A  apps/api/migrations/script.py.mako",
-    "A  apps/api/migrations/versions/0001_foundation.py",
-    "A  apps/api/migrations/versions/0002_domains.py",
-    "A  apps/api/pyproject.toml",
-    "A  apps/api/requirements.lock",
-    "A  apps/api/src/rolekai/__init__.py",
-    "A  apps/api/src/rolekai/activity/__init__.py",
-    "A  apps/api/src/rolekai/activity/models.py",
-    "A  apps/api/src/rolekai/api/__init__.py",
-    "AM apps/api/src/rolekai/api/contracts.py"
+    " M .github/workflows/quality.yml",
+    " M .planning/HANDOFF.json",
+    " M .planning/ROADMAP.md",
+    " M .planning/STATE.md",
+    " M .planning/phases/03-job-ingestion/.continue-here.md",
+    " M HANDOFF.md",
+    " M apps/api/src/rolekai/api/routes.py",
+    " M apps/api/src/rolekai/connectors/manual_url.py",
+    " M apps/api/src/rolekai/workflows/imports.py",
+    " M apps/api/tests/integration/test_imports.py",
+    " M apps/api/tests/test_connectors.py",
+    " M package.json",
+    " M scripts/quality.cjs",
+    " M scripts/test-quality-negative.cjs",
+    "?? .planning/phases/03-job-ingestion/03-01-UNBLOCK.md",
+    "?? docs/development/INGESTION_UNBLOCK_VERIFICATION.json",
+    "?? scripts/npm-cli.cjs",
+    "?? tests/development/npm-cli.test.cjs"
   ],
-  "uncommitted_files_elided": 93,
-  "next_action": "Read HANDOFF.md, bootstrap on home machine, resume GSD and Agent Continuity, then review/finish only 03-01. Do not start 04-01.",
-  "context_notes": "Private GitHub transfer snapshot; uncommitted_files measured before publication commit, consult live git status after clone. Foundation/Core Domain approved, progress2/6; 03-01 tests pass but no completion SUMMARY. No Lever/Ashby/evaluator/UI/submission. No live source imports; synthetic fixtures. Pending review focus and reliable performance in HANDOFF.md. Portable verification JSON included."
+  "uncommitted_files_elided": 0,
+  "next_action": "Publish authorized patch; wait for successful Windows/Linux CI, then native 03-01 SUMMARY/progress/handoff. Never start 04-01. Additional automatic commits are not authorized.",
+  "context_notes": "Read 03-01-UNBLOCK.md for confirmed CI root cause, final independent review, six new API regressions and portable verification. No installations, commits, push or branch changes in this unblock task."
 }

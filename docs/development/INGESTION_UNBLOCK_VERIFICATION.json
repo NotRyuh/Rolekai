@@ -1,0 +1,161 @@
+{
+  "plan": "03-01",
+  "started_at": "2026-10-14T16:36:16.035Z",
+  "mode": "full",
+  "checks": [
+    {
+      "label": "Python 3.14 interpreter",
+      "exit_code": 0,
+      "duration_ms": 100
+    },
+    {
+      "label": "TypeScript",
+      "exit_code": 0,
+      "duration_ms": 2297
+    },
+    {
+      "label": "ESLint",
+      "exit_code": 0,
+      "duration_ms": 3044
+    },
+    {
+      "label": "Next production build",
+      "exit_code": 0,
+      "duration_ms": 4018
+    },
+    {
+      "label": "Ruff",
+      "exit_code": 0,
+      "duration_ms": 127
+    },
+    {
+      "label": "OpenAPI and generated TypeScript drift",
+      "exit_code": 0,
+      "duration_ms": 1608
+    },
+    {
+      "label": "API tests",
+      "exit_code": 0,
+      "duration_ms": 13707
+    },
+    {
+      "label": "Python dependency consistency",
+      "exit_code": 0,
+      "duration_ms": 461
+    },
+    {
+      "label": "Agent Continuity tests",
+      "exit_code": 0,
+      "duration_ms": 11798
+    },
+    {
+      "label": "Web production smoke",
+      "exit_code": 0,
+      "duration_ms": 718
+    }
+  ],
+  "completed_at": "2026-10-14T16:36:53.914Z",
+  "passed": true,
+  "domain_openapi_drift": "mandatory; checks OpenAPI and TypeScript against current DTOs",
+  "api_tests": 86,
+  "tooling_tests": 17,
+  "negative_controls": {
+    "platform": "win32",
+    "typescript_exit": 2,
+    "pytest_exit": 1,
+    "intended_diagnostics": true
+  },
+  "linux_probe": {
+    "node": "24.21.0",
+    "legacy_exit": 1,
+    "legacy_error": "MODULE_NOT_FOUND",
+    "corrected_exit": 0,
+    "layout_tests": 4,
+    "full_python_gate": "not run locally"
+  },
+  "remote_ci": {
+    "run": 38594667672,
+    "status": "failure",
+    "patch_published": false
+  },
+  "performance": {
+    "started_at": "2026-10-14T16:24:24.300165+00:00",
+    "scope": "instrumentation after initial preflight/log reads; full turn start unavailable",
+    "commands": [
+      {
+        "category": "tests",
+        "label": "npm-layout-regression-red",
+        "started_at": "2026-10-14T16:24:27.173409+00:00",
+        "duration_ms": 173,
+        "exit_code": 1
+      },
+      {
+        "category": "tests",
+        "label": "npm-layout-regression-green",
+        "started_at": "2026-10-14T16:25:19.861300+00:00",
+        "duration_ms": 203,
+        "exit_code": 0
+      },
+      {
+        "category": "tests",
+        "label": "actual-negative-controls",
+        "started_at": "2026-10-14T16:25:20.146952+00:00",
+        "duration_ms": 3793,
+        "exit_code": 0
+      },
+      {
+        "category": "verification",
+        "label": "full-gate-after-ci-fix",
+        "started_at": "2026-10-14T16:27:04.993833+00:00",
+        "duration_ms": 40466,
+        "exit_code": 1
+      },
+      {
+        "category": "tests",
+        "label": "npm-context-regression",
+        "started_at": "2026-10-14T16:31:42.919059+00:00",
+        "duration_ms": 11489,
+        "exit_code": 0
+      },
+      {
+        "category": "tests",
+        "label": "review-regressions-red",
+        "started_at": "2026-10-14T16:34:30.809907+00:00",
+        "duration_ms": 1944,
+        "exit_code": 1
+      },
+      {
+        "category": "tests",
+        "label": "preferred-source-red",
+        "started_at": "2026-10-14T16:35:00.489890+00:00",
+        "duration_ms": 1777,
+        "exit_code": 1
+      },
+      {
+        "category": "tests",
+        "label": "review-focused-green",
+        "started_at": "2026-10-14T16:35:16.228486+00:00",
+        "duration_ms": 5940,
+        "exit_code": 0
+      },
+      {
+        "category": "verification",
+        "label": "full-gate-final",
+        "started_at": "2026-10-14T16:35:57.614724+00:00",
+        "duration_ms": 9799,
+        "exit_code": 1
+      },
+      {
+        "category": "verification",
+        "label": "full-gate-ruff-corrected",
+        "started_at": "2026-10-14T16:36:15.988103+00:00",
+        "duration_ms": 37946,
+        "exit_code": 0
+      }
+    ],
+    "captured_at": "2026-10-14T16:41:19.928Z",
+    "total_session_duration": "unmeasured",
+    "installation_commands": 0,
+    "live_hook_duration": "unmeasured"
+  }
+}

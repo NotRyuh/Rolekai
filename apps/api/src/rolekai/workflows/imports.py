@@ -38,6 +38,15 @@ from rolekai.workflows.tables import (
 
 PARSER_VERSION = "ingestion-v1"
 PRIORITY = {"greenhouse": 3, "manual": 2, "remotive": 1}
+PAYLOAD_PATHS = {
+    "title_raw": "title",
+    "title_normalized": "title",
+    "company_display_name": "company_name",
+    "company_key": "company_name",
+    "salary": "salary",
+    "posted_at": "publication_date",
+    "country": "country",
+}
 
 
 def digest(value):
@@ -239,6 +248,8 @@ def persist_observation(c, owner, raw, run_id, request_id):
         rank = PRIORITY[existing["source_type"]] if existing else 0
         if not new and current[field] is not None and current[field] != value:
             conflicts.append(field)
+        if existing and existing["provenance_type"] == "human":
+            continue
         if PRIORITY[raw.source] >= rank:
             changes[field] = value
             c.execute(
@@ -255,8 +266,10 @@ def persist_observation(c, owner, raw, run_id, request_id):
                     job_id=job_id,
                     observation_id=obs_id,
                     field_name=field,
-                    payload_path=field,
-                    provenance_type="source",
+                    payload_path=PAYLOAD_PATHS[field],
+                    provenance_type="rule"
+                    if field in ("title_normalized", "company_key", "posted_at")
+                    else "source",
                 )
             )
     if conflicts:

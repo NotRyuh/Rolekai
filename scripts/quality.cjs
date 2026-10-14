@@ -4,7 +4,8 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const python = path.join(root, '.venv', process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python');
-const npmCli = process.env.npm_execpath || path.join(path.dirname(process.execPath), 'node_modules/npm/bin/npm-cli.js');
+const { resolveNpmCli } = require('./npm-cli.cjs');
+const npmCli = resolveNpmCli();
 const unitOnly = process.argv.includes('--unit-only');
 const report = { plan: '03-01', started_at: new Date().toISOString(), mode: unitOnly ? 'unit-only' : 'full', checks: [] };
 const commands = [

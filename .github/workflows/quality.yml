@@ -72,5 +72,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           .venv/Scripts/python.exe -m pip install --no-deps --no-build-isolation -e 'apps/api[test]'
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Prove type and test gates reject invalid inputs on Windows
+        run: node scripts/test-quality-negative.cjs
       - name: Windows type/lint/build/unit/continuity/smoke gates
         run: npm.cmd run quality -- --unit-only

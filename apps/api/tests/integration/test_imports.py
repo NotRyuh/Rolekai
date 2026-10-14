@@ -128,6 +128,9 @@ def test_direct_source_conflicts_keep_originals_preference_and_manual_applicatio
             select(provenance).where(provenance.c.field_name == "title_raw")
         ).one()
         assert title_link.provenance_type == "source"
+        from rolekai.api.routes import summary
+
+        assert summary(c, job)["preferred_source"] == "greenhouse"
 
 
 def test_similar_distinct_jobs_are_not_merged_and_exact_identity_conflict_is_safe(db):
@@ -462,3 +465,55 @@ def test_parallel_accept_same_key_enqueues_only_one_attempt(db):
     with db.connect() as c:
         assert len(c.execute(import_runs.select()).all()) == 1
         assert len(c.execute(background_jobs.select()).all()) == 1
+
+
+def test_provenance_paths_resolve_to_original_fields(db):
+    from rolekai.persistence import provenance
+
+    owner = uuid4()
+    payload = {"salary": "USD 100", "publication_date": "2026-10-01T12:00:00Z"}
+    item = raw("remotive", ident="101", extra=payload)
+    persist(db, owner, item)
+    expected = {
+        "title_raw": "title",
+        "title_normalized": "title",
+        "company_display_name": "company_name",
+        "company_key": "company_name",
+        "salary": "salary",
+        "posted_at": "publication_date",
+    }
+    with db.connect() as c:
+        rows = c.execute(provenance.select()).mappings().all()
+        assert {r["field_name"]: r["payload_path"] for r in rows} == expected
+        assert all(r["payload_path"] in item.raw_payload for r in rows)
+
+
+def test_source_refresh_preserves_human_field_correction_and_evidence(db):
+    from rolekai.persistence import jobs, observations, provenance
+
+    owner = uuid4()
+    first = persist(db, owner, raw("remotive", ident="101"))
+    with db.begin() as c:
+        c.execute(jobs.update().where(jobs.c.id == first["job_id"]).values(salary="Human value"))
+        observation = c.scalar(select(observations.c.id))
+        correction = uuid4()
+        c.execute(
+            provenance.insert().values(
+                id=correction,
+                owner_id=owner,
+                job_id=first["job_id"],
+                observation_id=observation,
+                field_name="salary",
+                provenance_type="human",
+                citation="Verified manually",
+            )
+        )
+    refresh = persist(
+        db, owner, raw("greenhouse", ident="fixture:201", extra={"salary": "Source value"})
+    )
+    assert refresh["job_id"] == first["job_id"] and refresh["needs_review"]
+    with db.connect() as c:
+        assert c.scalar(select(jobs.c.salary)) == "Human value"
+        row = c.execute(select(provenance).where(provenance.c.field_name == "salary")).one()
+        assert row.id == correction and row.provenance_type == "human"
+        assert len(c.execute(observations.select()).all()) == 2

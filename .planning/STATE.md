@@ -2,10 +2,11 @@
 gsd_state_version: "1.0"
 current_phase: 3
 current_phase_name: Job Ingestion
-status: paused
-stopped_at: 03-01 code/gates pass; paused for GitHub home transfer, independent review pending
-last_updated: "2026-10-13T23:04:15.338Z"
+status: executing
+stopped_at: 03-01 fixes/review/local gate pass; awaiting authorized publication and remote CI
+last_updated: "2026-10-14T16:41:23.876Z"
 last_activity: 2026-10-13
+state_head: 584a630aba8fc8baebca84e9ff4b48bc26700d1d
 progress:
   total_phases: 6
   completed_phases: 2
@@ -22,13 +23,13 @@ last_activity_desc: Job Ingestion implemented with passing local gates; review/a
 See: .planning/PROJECT.md (updated 2026-10-13)
 
 **Core value:** Evidence-backed remote discovery for Mexico and explicitly recorded manual applications.
-**Current focus:** P0.3 Job Ingestion — implementation and local gates pass; independent review and native close-out pending.
+**Current focus:** P0.3 Job Ingestion — corrections and independent review accepted locally; remote CI and native close-out pending.
 
 ## Current Position
 
 Phase: 3 of 6 (Job Ingestion)
 Plan: 1 of 1 in current phase
-Status: Paused
+Status: In progress
 Last activity: 2026-10-13
 
 Progress: [███░░░░░░░] 33%
@@ -49,18 +50,18 @@ Progress: [███░░░░░░░] 33%
 
 ### Pending Todos
 
-03-01 implementation/local gates pass; finish independent review, necessary regression fixes and native SUMMARY/requirement/progress close-out. Read HANDOFF.md. Do not start phase 4.
+03-01 fixes and independent review pass; full gate: 86 API + 17 tooling tests, ten checks. Obtain explicit publication authorization and successful remote CI before native SUMMARY/requirement/progress close-out. Read 03-01-UNBLOCK.md and HANDOFF.md. Do not start phase 4.
 
 ### Blockers/Concerns
 
 - Codex hook definitions require native review/trust in `/hooks`; no bypass used.
 - Context/compaction and cross-runtime recovery verified by contracts/simulation; no forced live compact.
 - Single semantic writer required for direct artifact edits; guard applies only to wrapped GSD mutations.
-- Remote GitHub CI has not run; local equivalent gates passed. ESLint 9 deprecation is documented tooling debt.
-- Independent ingestion reviewer could not run due runtime usage limit. No review approval obtained; 03-01 remains incomplete in GSD.
+- GitHub CI run 38594667672 remains failed. Confirmed Windows-only npm fallback in direct Node scripts; local fix and Linux reproduction pass. Patch not published; current user authorization for commit/push and a successful new CI run are required. ESLint 9 deprecation remains documented debt.
+- Independent review completed; provenance, human correction preservation, preferred source, provider redirects and NAT64 findings fixed with regressions. Final verdict technically acceptable subject to successful CI. 03-01 remains incomplete in GSD; progress 2/6.
 
 ## Session Continuity
 
-Last session: 2026-10-13T23:04:15.174Z
-Stopped at: 03-01 code/gates pass; paused for GitHub home transfer, independent review pending
+Last session: 2026-10-14T16:38:49.314Z
+Stopped at: 03-01 fixes/review/local gate pass; awaiting authorized publication and remote CI
 Resume file: .planning/phases/03-job-ingestion/.continue-here.md

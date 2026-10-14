@@ -1,6 +1,10 @@
 # Rolekai — continuar en casa
 
+Actualización 2026-10-14: se diagnosticó y corrigió el fallo de npm en Linux y se completó la revisión independiente con sus regresiones. Gate actual: **86 API + 17 tooling/continuidad**, diez checks aprobados. CI remoto sigue fallido: este patch no se ha publicado y requiere autorización explícita para commit/push. **03-01 no está cerrado; 04-01 sigue bloqueado.** Consultar `.planning/phases/03-job-ingestion/03-01-UNBLOCK.md` y `docs/development/INGESTION_UNBLOCK_VERIFICATION.json`. El resto de este documento conserva el contexto y las métricas del checkpoint anterior; la actualización anterior prevalece sobre sus pendientes históricos.
+
 Repositorio privado: https://github.com/NotRyuh/Rolekai. Este es un checkpoint autorizado por el usuario; no una declaración de cierre de Job Ingestion.
+
+Autorización posterior 2026-10-14: el usuario aprobó un commit/push de las correcciones revisadas y el handoff en master para verificar Actions. El cierre depende del resultado del nuevo run; no hay autorización para otros commits automáticos.
 
 ## Estado real
 

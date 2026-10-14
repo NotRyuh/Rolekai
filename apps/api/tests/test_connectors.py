@@ -8,6 +8,57 @@ import pytest
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
+@pytest.mark.parametrize("address", ["64:ff9b::a9fe:a9fe", "64:ff9b::7f00:1"])
+def test_nat64_private_destinations_are_rejected_before_transport(address):
+    from rolekai.connectors.base import ConnectorError
+    from rolekai.connectors.manual_url import SafeFetcher, public_ip
+
+    assert not public_ip(address)
+    calls = []
+    with pytest.raises(ConnectorError):
+        SafeFetcher(
+            resolver=lambda _: [address],
+            sender=lambda *a: calls.append(a),
+            allowed_hosts=["example.com"],
+        ).fetch("https://example.com/job")
+    assert calls == []
+
+
+@pytest.mark.parametrize(
+    "destination",
+    [
+        "/v1/boards/fixture/jobs/201/applications",
+        "https://remotive.com/api/remote-jobs",
+    ],
+)
+def test_source_json_does_not_follow_redirects_to_other_endpoints(monkeypatch, destination):
+    from functools import partial
+
+    from rolekai.connectors import manual_url
+    from rolekai.connectors.base import ConnectorError
+
+    calls = []
+
+    def sender(url, *args):
+        calls.append(url)
+        return manual_url.HTTPResult(302, {"location": destination}, b"")
+
+    monkeypatch.setattr(
+        manual_url,
+        "SafeFetcher",
+        partial(
+            manual_url.SafeFetcher,
+            resolver=lambda _: ["93.184.216.34"],
+            sender=sender,
+        ),
+    )
+    with pytest.raises(ConnectorError):
+        manual_url.fetch_json(
+            "https://boards-api.greenhouse.io/v1/boards/fixture/jobs?content=true"
+        )
+    assert len(calls) == 1
+
+
 def test_remotive_preserves_attribution_unknowns_and_request_endpoint():
     from rolekai.api.contracts import DiscoverRequest
     from rolekai.connectors.remotive import Remotive

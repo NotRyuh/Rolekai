@@ -111,7 +111,7 @@ Plans:
 | --- | --- | --- | --- |
 | 1. Foundation | 1/1 | Complete    | 2026-10-13 |
 | 2. Core Domain | 1/1 | Complete    | 2026-10-13 |
-| 3. Job Ingestion | 0/1 | Not started | - |
+| 3. Job Ingestion | 0/1 | In progress; remote CI pending | - |
 | 4. Job Intelligence | 0/1 | Not started | - |
 | 5. Dashboard | 0/1 | Not started | - |
 | 6. End-to-End Validation | 0/1 | Not started | - |
